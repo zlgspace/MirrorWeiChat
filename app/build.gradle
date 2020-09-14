@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.zlgspace.mirrorweichat"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //socket
+    implementation 'com.zlgspace:simplesocket:1.0.0'
+    //msgpraser 消息处理框架
+    implementation 'com.zlgspace:msgpraser:1.0.0'
+    annotationProcessor 'com.zlgspace:msgpraser-compiler:1.0.0'
+    //单例框架
+    implementation 'com.zlgspace:singleinstance:1.0.0'
+    annotationProcessor 'com.zlgspace:singleinstance-compiler:1.0.0'
+    //权限请求
+    implementation 'com.zlgspace:easy-req-permission:1.0.1'
+    annotationProcessor 'com.zlgspace:erp-compile:1.0.1'
+    //定时器
+    implementation 'com.zlgspace:timer-princkin:1.0.0'
+    //日志
+    implementation 'com.zlgspace:logadapter:1.0.0'
+
+}
