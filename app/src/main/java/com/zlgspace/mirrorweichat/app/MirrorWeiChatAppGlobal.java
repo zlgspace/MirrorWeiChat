@@ -19,5 +19,4 @@ public class MirrorWeiChatAppGlobal extends BaseMirrorWeiChatAppGlobal {
         MirrorWeiChatCtroller.setConnect2Svr(false);
     }
 
-
 }

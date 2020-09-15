@@ -25,8 +25,6 @@ public class LoginActivity extends BaseActivity {
 
     private LoginActivity_ReqPermission reqPermission;
 
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,14 +5,16 @@ import com.zlgspace.mirrorweichat.net.msgparser.MsgDefine;
 import com.zlgspace.msgpraser.MsgParser;
 import com.zlgspace.simplesocket.MsgAnalysisAdapter;
 import com.zlgspace.simplesocket.SimpleSocket;
+import com.zlgspace.timerprincekin.TimeTask;
+import com.zlgspace.timerprincekin.TimerPrincekin;
 
 public final class SocketMng {
-
     private static final int PORT = 55564;
-
     private static final String SERVER_IP = "127.0.0.1";
+    private static final long RECONNECT_TIME = 3*1000;
 
     private static SimpleSocket simpleSocket;
+    private static boolean isManualStop = false;
 
     private static SimpleSocket.Callback<String> callback = new SimpleSocket.Callback<String>(){
         @Override
@@ -39,6 +41,15 @@ public final class SocketMng {
         @Override
         public void onSocketDisConnected() {
             MsgParser.sendEmptyMsg(MsgDefine.onSocketDisConnected.toString());
+            close();
+            if(!isManualStop){
+                TimeTask tt = new TimeTask();
+                tt.setDelay(RECONNECT_TIME);
+                tt.setExeCount(-1);//一直
+                tt.setTask(() -> connect());
+                //异常断链，每隔三秒重新链接
+                TimerPrincekin.addTask(tt);
+            }
         }
 
         @Override
@@ -55,11 +66,13 @@ public final class SocketMng {
             simpleSocket.setCallback(callback);
             simpleSocket.setMsgAnalysisAdapter(new AnalysisAdapter());
         }
+        isManualStop = false;
         simpleSocket.connect();
     }
 
 
     public static void close(){
+        isManualStop = true;
         simpleSocket.close();
         simpleSocket = null;
     }
