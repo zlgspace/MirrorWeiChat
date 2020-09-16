@@ -1,4 +1,4 @@
-package com.finglauytao.wxbasemodel.life
+package com.mirrorweichat.wxbasemodel.life
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -5,7 +5,7 @@ import android.os.Handler;
 import androidx.annotation.UiThread;
 
 import com.zlgspace.mirrorweichat.net.msgparser.entity.MsgEntity;
-import com.zlgspace.mirrorweichat.utils.GsonUtil;
+import com.mirrorweichat.wxservice.utils.GsonUtil;
 import com.zlgspace.msgpraser.base.CallbackMsg;
 
 public class MsgParserAdapter extends com.zlgspace.msgpraser.base.MsgParserAdapter<String,String> {

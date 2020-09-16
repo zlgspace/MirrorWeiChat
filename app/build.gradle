@@ -24,12 +24,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':WXBaseModel')
+
     implementation rootProject.ext.appcompat
     implementation rootProject.ext.constraintlayout
 
     implementation rootProject.ext.simplesocket
     implementation rootProject.ext.msgpraser
-    implementation project(path: ':WXBaseModel')
     annotationProcessor rootProject.ext.msgpraser_compiler
     implementation rootProject.ext.singleinstance
     annotationProcessor rootProject.ext.singleinstance_compiler

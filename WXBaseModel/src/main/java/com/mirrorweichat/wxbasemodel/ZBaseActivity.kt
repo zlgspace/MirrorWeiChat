@@ -1,8 +1,8 @@
-package com.finglauytao.wxbasemodel
+package com.mirrorweichat.wxbasemodel
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes
-import com.finglauytao.wxbasemodel.life.ZLifeActivity
+import com.mirrorweichat.wxbasemodel.life.ZLifeActivity
 
 /**
  * Create on 2020/9/16

@@ -1,6 +1,6 @@
 package com.zlgspace.mirrorweichat.msgparser.entity;
 
-import com.zlgspace.mirrorweichat.utils.GsonUtil;
+import com.mirrorweichat.wxservice.utils.GsonUtil;
 
 public class BaseEntity {
     @Override

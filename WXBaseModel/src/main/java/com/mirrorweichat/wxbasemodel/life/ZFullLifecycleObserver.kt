@@ -1,4 +1,4 @@
-package com.finglauytao.wxbasemodel.life
+package com.mirrorweichat.wxbasemodel.life
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
