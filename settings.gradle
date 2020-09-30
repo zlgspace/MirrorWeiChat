@@ -1,3 +1,0 @@
-include ':WXService'
-include ':WXBaseModel'
-include ':app'
