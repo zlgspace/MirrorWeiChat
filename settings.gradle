@@ -1,2 +1,0 @@
-include ':mwc_base', ':mwc_service', ':mwc_net', ':mwc_net_entity'
-include ':app'
