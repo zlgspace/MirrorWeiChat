@@ -43,5 +43,6 @@ dependencies {
     api rootProject.ext.singleinstance
     api rootProject.ext.easy_req_permission
     api rootProject.ext.timer_princkin
-    api rootProject.ext.logadapter
+    api files('libs\\logadapter_v0.5.jar')
+//    api rootProject.ext.logadapter
 }

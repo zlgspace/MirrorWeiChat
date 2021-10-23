@@ -23,7 +23,7 @@ allprojects {
     repositories {
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://dl.bintray.com/zlgspace/maven' }
+        mavenCentral()
         google()
         jcenter()
     }
